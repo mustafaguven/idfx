@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <tr.com.idefix.android.components.SwitchButton
+        android:id="@+id/switchButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/rlFavouriteList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/switchButton"
+        android:visibility="visible"
+        >
+
+      <RelativeLayout
+          android:id="@+id/rlNoFavourites"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="15dp"
+          android:visibility="gone"
+          >
+
+        <ImageView
+            android:id="@+id/imgHeart"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_heart_bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgHeart"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/no_product_in_wish_list"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+      </RelativeLayout>
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/rvFavourites"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="8dp"
+          android:overScrollMode="never"
+          android:visibility="gone"
+          />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlAlarmList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchButton"
+        android:visibility="gone"
+        >
+
+      <RelativeLayout
+          android:id="@+id/rlNoAlarm"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="15dp"
+          android:visibility="gone"
+          >
+
+        <ImageView
+            android:id="@+id/imgAlarm"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_alarm_notification"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgAlarm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/no_product_in_alarm_list"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+      </RelativeLayout>
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/rvAlarm"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="8dp"
+          android:overScrollMode="never"
+          android:visibility="gone"
+          />
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+</LinearLayout>

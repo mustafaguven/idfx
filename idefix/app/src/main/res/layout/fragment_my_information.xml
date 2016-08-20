@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    >
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        >
+
+      <tr.com.idefix.android.components.SwitchButton
+          android:id="@+id/switchButton"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginBottom="20dp"
+          android:layout_marginTop="20dp"
+          />
+
+
+      <RelativeLayout
+          android:id="@+id/rlBilgilerimContainer"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@id/switchButton"
+          android:visibility="visible"
+          >
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_container"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_login_button"
+            android:text="@string/do_logout"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnLogout"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/email"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblMail"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_cities"
+            android:enabled="false"
+            android:padding="15dp"
+            android:text=""
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMail"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblName"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_cities"
+            android:padding="15dp"
+            android:text=""
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtName"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/surname"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblSurname"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_cities"
+            android:padding="15dp"
+            android:text=""
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSurname"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/sex"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/ddlSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblSex"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_spinner"
+            android:padding="0dp"
+            android:popupBackground="#cccccc"
+            android:spinnerMode="dialog"
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblBirthDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ddlSex"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/birthdate"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtBirthDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblBirthDate"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_spinner"
+            android:gravity="left|center"
+            android:paddingBottom="0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp"
+            android:textColor="#000000"
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblHomePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBirthDate"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/homephone"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtHomePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblHomePhone"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_cities"
+            android:inputType="phone"
+            android:maxLength="20"
+            android:padding="15dp"
+            android:text=""
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblGSMPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtHomePhone"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/gsm"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/txtGSMPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblGSMPhone"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_cities"
+            android:hint="(xxx)xxx-xx-xx"
+            android:inputType="phone"
+            android:maxLength="14"
+            android:padding="15dp"
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtGSMPhone"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/country"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/ddlCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblCountry"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_spinner"
+            android:padding="0dp"
+            android:popupBackground="#cccccc"
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ddlCountry"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/city"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/ddlCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblCity"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_spinner"
+            android:padding="0dp"
+            android:popupBackground="#cccccc"
+            />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/chCampaign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ddlCity"
+            android:layout_marginBottom="20dp"
+            android:text="@string/let_us_inform_you_about_our_campaigns"
+            android:textSize="20sp"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSaveContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chCampaign"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_login_button"
+            android:text="@string/save"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+      </RelativeLayout>
+
+
+      <RelativeLayout
+          android:id="@+id/rlSifreContainer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/switchButton"
+          android:visibility="gone"
+          >
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblCurrentPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/current_password"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtCurrentPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblCurrentPassword"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_cities"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCurrentPassword"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/new_password"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblNewPassword"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_cities"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblConfirmNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNewPassword"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/confirm_new_password"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtConfirmNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblConfirmNewPassword"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_cities"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnUpdatePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtConfirmNewPassword"
+            android:background="@drawable/bg_login_button"
+            android:text="@string/save"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+      </RelativeLayout>
+
+    </RelativeLayout>
+  </ScrollView>
+</LinearLayout>

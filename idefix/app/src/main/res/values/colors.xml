@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="bg_splash">#236074</color>
+  <color name="splash_status_color">#236074</color>
+  <color name="secondory_menu_color">#b0b6c0</color>
+  <color name="menu">#313336</color>
+  <color name="foreground_material_dark">#236074</color>
+  <color name="textColorSecondary">#040000</color>
+  <color name="status_green_start">#236074</color>
+  <color name="status_green_end">#236074</color>
+  <color name="status_stores_start">#236074</color>
+  <color name="bg_red_toolbar_start">#236074</color>
+  <color name="bg_red_toolbar_end">#236074</color>
+  <color name="gray_light">#D5D5D5</color>
+  <color name="gray_light_font">#767676</color>
+  <color name="gray_dark">#5D5D5D</color>
+  <color name="transparent">#00FFFFFF</color>
+  <color name="status_brassy_green_start">#236074</color>
+  <color name="status_brassy_green_end">#236074</color>
+  <color name="status_grey">#236074</color>
+  <color name="status_brown">#236074</color>
+
+
+</resources>

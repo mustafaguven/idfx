@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@drawable/bg_toolbar_red"
+    app:layout_collapseMode="pin"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="left"
+        android:text="@string/turn_your_back"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <tr.com.idefix.android.view.components.BasketViewComponent
+        android:id="@+id/basket_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/basket_count"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignRight="@id/basket_icon"
+        android:layout_alignTop="@id/basket_icon"
+        android:layout_marginRight="-10dp"
+        android:background="@drawable/bg_basket_count"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        />
+
+    <tr.com.idefix.android.view.components.SearchViewComponent
+        android:id="@+id/search_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@id/basket_icon"
+        />
+  </RelativeLayout>
+</android.support.v7.widget.Toolbar>

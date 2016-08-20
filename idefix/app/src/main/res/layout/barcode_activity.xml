@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_toolbar_stores"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:text="@string/barcode"
+          android:textColor="#fff"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          />
+
+    </RelativeLayout>
+  </android.support.v7.widget.Toolbar>
+
+
+  <com.journeyapps.barcodescanner.DecoratedBarcodeView
+      android:id="@+id/zxing_barcode_scanner"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_alignParentBottom="true"
+      android:layout_below="@+id/toolbar"
+      app:zxing_use_texture_view="true"
+      />
+
+
+</RelativeLayout>

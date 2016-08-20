@@ -1,0 +1,125 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tr.com.idefix.android.view.fragments.LoginFragment"
+    >
+
+  <RelativeLayout
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:minLines="2"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:singleLine="false"
+        android:text="@string/login_title"
+        android:textColor="#000"
+        android:textSize="20sp"
+        />
+
+    <android.support.design.widget.TextInputLayout
+
+        android:id="@+id/emailLayout"
+        android:layout_below="@id/login_title"
+        style="@style/login_input_layout"
+        >
+
+      <android.support.v7.widget.AppCompatEditText
+          android:id="@+id/email_edit_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/email"
+          android:inputType="textEmailAddress"
+          android:text=""
+          android:textColor="#000"
+          />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/passLayout"
+        android:layout_below="@id/emailLayout"
+        android:layout_marginTop="0dp"
+        style="@style/login_input_layout"
+        >
+
+      <android.support.v7.widget.AppCompatEditText
+          android:id="@+id/password_edit_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/password"
+          android:inputType="textPassword"
+          android:singleLine="true"
+          android:text=""
+          android:textColor="#000"
+          />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passLayout"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+      <android.support.v7.widget.AppCompatCheckBox
+          android:id="@+id/remember_me"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="25dp"
+          android:text="@string/remember_me"
+          android:textColor="#000"
+          android:textColorHighlight="#284a94"
+          />
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/forget_password"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/forget_password"
+          android:textColor="#979ba0"
+          android:textStyle="bold"
+          />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_container"
+        android:layout_margin="25dp"
+        android:background="@drawable/bg_login_button"
+        android:text="@string/do_enter"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblBeMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_centerInParent="true"
+        android:text="@string/be_a_member"
+        android:textColor="#979ba0"
+        android:textStyle="bold"
+        />
+  </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

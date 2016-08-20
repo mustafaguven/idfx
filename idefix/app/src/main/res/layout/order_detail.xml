@@ -1,0 +1,356 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_toolbar_stores"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:text="@string/order_detail"
+          android:textColor="#fff"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          />
+
+    </RelativeLayout>
+  </android.support.v7.widget.Toolbar>
+
+  <ScrollView
+      android:id="@+id/scrollView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/toolbar"
+      android:visibility="gone"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+      <RelativeLayout
+          android:id="@+id/rlDate"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/order_date"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/lblOrderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="25.02.2016"
+            />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlStatus"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@id/rlDate"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/order_status"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/lblOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Sipariş İptal"
+            />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlStatusSpacer"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_below="@id/rlStatus"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlPriceWithoutDiscount"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@id/rlStatusSpacer"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/order_price_without_discount"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/lblPriceWithoutDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="16.49 TL"
+            />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlDiscount"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@id/rlPriceWithoutDiscount"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          android:visibility="gone"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/order_discount"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/lblDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="0.33 TL"
+            />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlPriceTotal"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@id/rlDiscount"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/order_price_total"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/lblPriceTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="16.16 TL"
+            />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlItems"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/rlPriceTotal"
+          />
+
+
+      <RelativeLayout
+          android:id="@+id/rlCargoPrice"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@id/rlItems"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/cargo_price"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/lblCargoPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="16.16 TL"
+            />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlShippingAddress"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@id/rlItems"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/shipping_address"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+      </RelativeLayout>
+
+
+      <RelativeLayout
+          android:id="@+id/rlShippingAddressDesc"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/rlShippingAddress"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+
+        <TextView
+            android:id="@+id/lblShippingAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            tools:text="Tarabya mh. Tarabya bayırı Cd. Sanatçılar sitesi 26 B Blok Daire:12"
+            android:textSize="18sp"
+            />
+      </RelativeLayout>
+
+
+
+
+      <RelativeLayout
+          android:id="@+id/rlInvoiceAddress"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@id/rlShippingAddressDesc"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/invoice_address"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+      </RelativeLayout>
+
+
+      <RelativeLayout
+          android:id="@+id/rlInvoiceAddressDesc"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/rlInvoiceAddress"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_favourites_adapter_item"
+          android:padding="10dp"
+          >
+
+        <TextView
+            android:id="@+id/lblInvoiceAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            tools:text="Tarabya mh. Tarabya bayırı Cd. Sanatçılar sitesi 26 B Blok Daire:12"
+            android:textSize="18sp"
+            />
+      </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+  </ScrollView>
+
+</RelativeLayout>

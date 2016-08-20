@@ -1,0 +1,9 @@
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/categories"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="#fff"
+    android:overScrollMode="never"
+    android:scrollbars="vertical"
+    />

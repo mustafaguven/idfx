@@ -1,0 +1,165 @@
+<resources>
+  <string name="app_name">idefix</string>
+
+  <string name="hello_world">Hello world!</string>
+  <string name="action_settings">Settings</string>
+  <string name="title_activity_login">LoginActivity</string>
+  <string name="title_activity_common">CommonActivity</string>
+  <string name="title_activity_splash">SplashActivity</string>
+  <string name="login">GİRİŞ YAP</string>
+  <string name="copyright_info">Copyright 1999-2016\nDoğan Müzik Kitap Mağazacılık ve Pazarlama A.Ş</string>
+  <string name="about_dr"><![CDATA[IDEFIX HAKKINDA]]></string>
+  <string name="stores">MAĞAZALAR</string>
+  <string name="stores_title">MAĞAZALAR</string>
+  <string name="contracts">SÖZLEŞMELER</string>
+  <string name="title_activity_stores">StoresActivity</string>
+  <string name="choose_city">İl Seçiniz</string>
+  <string name="email">E-Posta Adresi</string>
+  <string name="password">Şifre</string>
+  <string name="title_activity_categories">CategoriesActivity</string>
+  <string name="menu">MENÜ</string>
+  <string name="tab_category_title">Kategoriler</string>
+  <string name="login_title"><![CDATA[idefix eğlence dünyasına hoş geldiniz!]]></string>
+  <string name="remember_me">Beni Hatırla</string>
+  <string name="forget_password">Şifremi Unuttum</string>
+  <string name="do_enter">GİRİŞ YAP</string>
+  <string name="title_best_sellers">Çok Satanlar</string>
+  <string name="title_most_new">En Yeniler</string>
+  <string name="all">Tümü</string>
+  <string name="title_activity_forget_password">ForgetPasswordActivity</string>
+  <string name="title_activity_user_profile">UserProfileActivity</string>
+  <string name="title_activity_search">SearchActivity</string>
+  <string name="title_activity_basket">BasketActivity</string>
+  <string name="title_activity_product_detail">ProductDetailActivity</string>
+  <string name="title_barcode_activity">title_barcode_activity</string>
+  <string name="turn_your_back">GERİ DÖN</string>
+  <string name="title_activity_review">ReviewActivity</string>
+  <string name="title">Başlık</string>
+  <string name="review">Yorum</string>
+  <string name="title_activity_reviews">ReviewsActivity</string>
+  <string name="my_informations">Bilgilerim</string>
+  <string name="my_orders">Siparişlerim</string>
+  <string name="my_lists">Listelerim</string>
+  <string name="do_logout">Çıkış Yap</string>
+  <string name="let_us_inform_you_about_our_campaigns"><![CDATA[idefix\'in yapacağı kampanya duyurularından ve tanıtımlarından haberdar olmak istiyorum.]]></string>
+  <string name="save">Kaydet</string>
+  <string name="name">Ad</string>
+  <string name="surname">Soyad</string>
+  <string name="sex">Cinsiyet</string>
+  <string name="birthdate">Doğum Günü</string>
+  <string name="homephone">Ev Telefonu</string>
+  <string name="gsm">Cep Telefonu</string>
+  <string name="country">Ülke</string>
+  <string name="city">Şehir</string>
+  <string name="current_password">Mevcut Şifreniz</string>
+  <string name="new_password">Yeni Şifreniz</string>
+  <string name="confirm_new_password">Yeni Şifreniz (Tekrar)</string>
+  <string name="your_informations_is_changed_successfully">Bilgileriniz başarıyla güncellenmiştir</string>
+  <string name="fill_in_the_blanks">Tüm şifre alanlarını doldurun</string>
+  <string name="passwords_are_not_same">Girdiğiniz yeni şifre bilgileri birbirleriyle uyuşmuyor</string>
+  <string name="password_is_changed_successfully">Şifreniz başarıyla değiştirildi</string>
+  <string name="price_title">Tutar:</string>
+  <string name="stock_title">Stok Durumu:</string>
+  <string name="purchase_it">SATIN AL</string>
+  <string name="remove_it">SİL</string>
+  <string name="no_product_in_wish_list">Favori listenizde herhangi bir ürün bulunmamaktadır.</string>
+  <string name="no_product_in_alarm_list">Alarm listenizde herhangi bir ürün bulunmamaktadır.</string>
+  <string formatted="false" name="notify_me">Fiyatı %s tarihine kadar, %s\'ye indiğinde haber ver.</string>
+  <string name="order_status">Sipariş Durumu:</string>
+  <string name="total_amount">Toplam Tutar:</string>
+  <string name="order_code">Sipariş Kodu:</string>
+  <string name="order_date">Sipariş Tarihi:</string>
+  <string name="no_order_found">Siparişiniz bulunmamaktadır</string>
+  <string name="search_result">ARAMA SONUCU</string>
+  <string name="search">Ara</string>
+  <string name="result_count">Adet Sonuç</string>
+  <string name="collapse">DARALT</string>
+  <string name="less_word_length">Arama kelimesi 2 harften az olamaz</string>
+  <string name="price_highest_first">Fiyat Azalan</string>
+  <string name="price_lowest_first">Fiyat Artan</string>
+  <string name="comment_highest_first">Yorum Azalan</string>
+  <string name="comment_lowest_first">Yorum Artan</string>
+  <string name="soldcount_highest_first">En Çok Satan</string>
+  <string name="soldcount_lowest_first">En Az Satan</string>
+  <string name="createdate_newest_first">Yeni</string>
+  <string name="createdate_lowest_first">Eski</string>
+  <string name="a_to_z">A-Z</string>
+  <string name="z_to_a">Z-A</string>
+  <string name="discount_highest_first">İndirim Azalan</string>
+  <string name="discount_lowest_first">İndirim Artan</string>
+  <string name="brands">MARKA</string>
+  <string name="media_types">MEDYA CİNSİ</string>
+  <string name="category">KATEGORİ</string>
+  <string name="prices">FİYAT</string>
+  <string name="ok">TAMAM</string>
+  <string name="filter_the_list">LİSTEYİ FİLTRELE</string>
+  <string-array name="my_informations_switchbutton">
+    <item>Bilgilerim</item>
+    <item>Şifre Bilgim</item>
+  </string-array>
+  <string-array name="my_list_switchbutton">
+    <item>Favori Listem</item>
+    <item>Alarm Listem</item>
+  </string-array>
+
+  <string-array name="sex_list">
+    <item>Cinsiyet</item>
+    <item>Erkek</item>
+    <item>Kadın</item>
+  </string-array>
+  <string name="title_activity_filter">FilterActivity</string>
+  <string name="send">Gönder</string>
+  <string name="invalid_email">Geçersiz eposta adresi girdiniz.</string>
+  <string name="be_a_member">Henüz üye değilseniz Üye olun.</string>
+  <string name="title_activity_signup">SignupActivity</string>
+  <string name="sign_up_description">Buradan oluşturacağınız üyelik kaydı ile tüm D&amp;R uygulamalarına giriş yapabilirsiniz</string>
+  <string name="confirm_password">Şifre Tekrar</string>
+  <string name="signup_privacy_desc">D&amp;R, üyelik bilgilerinizi üçüncü kişilerle paylaşmamaktadır. D&amp;R duyurularını almak istemezseniz, kişisel bilgilerim ayarlarından değişiklik yapabilirsiniz.</string>
+  <string name="signup_aggreement_approve">Üyelik Sözleşmesi\'ni okudum, onaylıyorum</string>
+  <string name="become_a_member">ÜYE OL</string>
+  <string name="blank_field_warning">Boş bırakılamaz</string>
+  <string name="passwords_dont_match">Şifreler uyuşmuyor</string>
+  <string name="approve_aggerement">Üyelik sözleşmesini imzalayınız</string>
+  <string name="signup_succesfull">Üyeliğiniz başarıyla gerçekleştirildi</string>
+  <string name="login_screen">ÜYE GİRİŞİ</string>
+  <string name="vision_desc">Herkesi, kültür ve eğlence dünyasının sunduğu zenginlikleri daha sık, daha kolay ve daha nitelikli bir şekilde keşfetmeye, keyfini çıkarmaya ve paylaşmaya teşvik eden, böylece insanları ortak bir platformda biraraya getiren ve hayatın her anını zenginleştiren bir dünya.</string>
+  <string name="vision_title">D&amp;R Marka Vizyonu</string>
+  <string name="mission_title">D&amp;R Marka Misyonu</string>
+  <string name="mission_desc">D&amp;R, evrensel ürün yelpazesi ve hizmet anlayışı ile her müşterisine, kültür ve eğlence ürünlerine ulaşmanın ve bunun keyfini çıkarmanın eşsiz deneyimini her zaman ve her yerde yaşatır.</string>
+  <string name="history">Tarihçe</string>
+    <string name="history_desc">Doğan Medya Grubu\'nun bir üyesi olan D&amp;R, 1996 yılının Kasım ayında kuruldu ve ilk mağazasını 1997 yılının Mayıs ayında Erenköy\'de açtı. Türkiye genelinde 26 ilde 147 mağazası bulunan D&amp;R sektöründe pazar liderliğini sürdürüyor. Kitaptan müziğe, filmden elektroniğe, oyundan hobiye, hediyelik eşyadan kırtasiyeye, geniş ürün seçenekleri sunan D&amp;R, toplumu kitap okumaya, müzik dinlemeye, film izlemeye özendirerek üstlendiği sosyal sorumluluk görevini de yerine getiriyor. D&amp;R, eğlence ve kültür ürünleriyle tüketiciyi buluşturarak, okuyan ve dinleyen bir Türk toplumunun oluşumuna katkıda bulunuyor. Her geçen gün bir yenisi açılan D&amp;R mağazaları, şehirlerin işlek caddeleri ile Türk ve dünya markalarının buluştuğu modern alışveriş merkezlerinde yer alıyor.
+D&amp;R 2004 yılında yeni mağazacılık anlayışı getirerek mağaza standartlarını geliştirdi.
+Ankara Tunalı, İzmir Forum Bornova ve Kanyon mağazaları ile mega mağazacılık alanında büyük adımlar attı, hem dekorasyonu, hem cafeleri ile Avrupa\'daki örneklerini aratmayacak mekanlar yarattı. D&amp;R, kültür, sanat, eğlence konusunda geniş bir ürün yelpazesini modern ve dinlendirici bir atmosfer içerisinde sunan Türkiye\'nin tek perakende zinciri olarak, cafeleri, dinleme kuleleri, okuma alanları, sanatçılarla hayranlarını buluşturan ve artık gelenek haline gelen imza günleri, partiler, galalar, ürün lansmanları ile klasik mağaza konseptinin dışında hizmet anlayışı geliştirdi.
+</string>
+  <string name="title_activity_about">Hakkında</string>
+  <string name="main_menu">ANA MENÜ</string>
+  <string name="in_stock">Var</string>
+  <string name="phone_dummy">xxxxxxxxxx</string>
+  <string name="phone_dummy_temp">0000000000</string>
+  <string name="title_activity_sozlesme">SozlesmeActivity</string>
+  <string name="ordering">Sıralama</string>
+  <string name="parentid">parentid</string>
+  <string name="product_added_to_basket">Ürün sepete eklendi</string>
+  <string name="barcode">BARKOD İLE OKUT</string>
+  <string name="title_barcode">BarcodeInfoActivity</string>
+  <string name="do_not_show_again">Bunu bir daha gösterme</string>
+  <string name="continue_text">DEVAM</string>
+  <string name="barcode_text_2"><![CDATA[idefix\'den satılan herhangi bir ürünü barkod okuyucunuz ile okutarak detaylarını inceleyebilir, sepetinize ekleyebilirsiniz.\n\nOkutmak istediğiniz ürün üzerindeki barkod bölümünü bulun ve okutun.]]></string>
+  <string name="barcode_text_1">Nasıl?</string>
+  <string name="show_camera_to_barcode">Barkoda doğru tutunuz</string>
+  <string name="order_detail">SİPARİŞ DETAYI</string>
+  <string name="title_orderdetail">OrderDetailActivity</string>
+  <string name="order_price_without_discount">İndirimsiz Tutar:</string>
+  <string name="order_price_total">KDV Toplam Tutar:</string>
+  <string name="order_discount">İndirim:</string>
+  <string name="unit">Adet:</string>
+  <string name="unit_price">Birim Fiyat:</string>
+  <string name="total_price">Toplam Fiyat:</string>
+  <string name="cargo_price">Kargo Fiyat:</string>
+  <string name="shipping_address">Teslimat Adresi</string>
+  <string name="invoice_address">Fatura Adresi</string>
+  <string name="notify_purchasing">ÖDEME BİLDİR</string>
+  <string name="title_notifyPayment">NotifyPaymentActivity</string>
+  <string name="notify_payment">Ödeme Bildir</string>
+
+</resources>

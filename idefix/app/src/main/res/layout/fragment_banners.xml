@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|top"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    >
+
+  <com.zanlabs.widget.infiniteviewpager.InfiniteViewPager
+      android:id="@+id/pager"
+      android:layout_width="match_parent"
+      android:layout_height="170dp"
+      android:overScrollMode="never"
+      android:paddingLeft="0dp"
+      android:paddingRight="0dp"
+      />
+
+  <com.zanlabs.widget.infiniteviewpager.indicator.CirclePageIndicator
+      android:id="@+id/indicator"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#FFF"
+      android:paddingBottom="3dp"
+      android:paddingTop="3dp"
+      />
+
+</LinearLayout>

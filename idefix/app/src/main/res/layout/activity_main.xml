@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity"
+    >
+
+  <include
+      layout="@layout/toolbar_main"
+      android:id="@+id/toolbar"
+      />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/toolbar"
+      android:orientation="vertical"
+      >
+
+    <fragment
+        android:id="@+id/fragment_banner"
+        android:name="tr.com.idefix.android.view.fragments.BannerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+    <fragment
+        android:id="@+id/fragment_menu"
+        android:name="tr.com.idefix.android.view.fragments.MainMenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_category_height"
+        android:layout_below="@id/fragment_banner"
+        />
+
+    <fragment
+        android:id="@+id/fragment_bottom_info"
+        android:name="tr.com.idefix.android.view.fragments.MainMenuBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        />
+
+  </RelativeLayout>
+</RelativeLayout>

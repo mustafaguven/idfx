@@ -1,0 +1,1495 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    >
+
+  <include
+      layout="@layout/toolbar_product_detail"
+      android:id="@+id/toolbar"
+      />
+
+  <!--    <android.support.design.widget.CoordinatorLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_above="@+id/basketContainer"
+          android:fitsSystemWindows="true">-->
+
+  <!--<android.support.design.widget.AppBarLayout
+
+      android:id="@+id/appbar"
+      android:layout_width="match_parent"
+      android:layout_height="256dp"
+      android:fitsSystemWindows="true"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+      <android.support.design.widget.CollapsingToolbarLayout
+          android:id="@+id/collapsing_toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:fitsSystemWindows="true"
+          app:contentScrim="?attr/colorPrimary"
+          app:expandedTitleMarginEnd="64dp"
+          app:expandedTitleMarginStart="48dp"
+          app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+
+
+      </android.support.design.widget.CollapsingToolbarLayout>
+  </android.support.design.widget.AppBarLayout>-->
+
+
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/toolbar"
+      android:layout_gravity="fill_vertical"
+      android:background="#FFFFFF"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+      <android.support.v7.widget.CardView
+
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            >
+
+
+          <ImageView
+              android:id="@+id/product_image"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="15dp"
+              android:fitsSystemWindows="true"
+              />
+
+          <TextView
+              android:id="@+id/product_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="15dp"
+              android:gravity="center"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:textSize="18sp"
+              android:textStyle="bold"
+              />
+
+          <include layout="@layout/product_detail_button_bar"/>
+
+          <LinearLayout
+              android:id="@+id/productAttrContainer"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="15dp"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:visibility="gone"
+              >
+
+            <TextView
+                android:id="@+id/first_attr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="first attr"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+          </LinearLayout>
+
+          <View
+              android:id="@+id/productAttrContainerHr"
+              android:layout_width="match_parent"
+              android:layout_height="3dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="15dp"
+              android:background="#000"
+              />
+
+          <LinearLayout
+              android:id="@+id/groupedProductAttrContainer"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="15dp"
+              android:orientation="horizontal"
+              android:paddingLeft="5dp"
+              android:paddingRight="5dp"
+              android:visibility="gone"
+              >
+
+            <LinearLayout
+                android:id="@+id/first_gattr_container"
+                style="@style/GroupedProductAttrContainer"
+                >
+
+              <TextView
+                  android:id="@+id/first_gattr"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:ellipsize="middle"
+                  android:gravity="center"
+                  android:paddingLeft="5dp"
+                  android:paddingRight="5dp"
+                  android:singleLine="true"
+                  android:text="first attr"
+                  android:textColor="#000"
+                  android:textSize="16sp"
+                  android:textStyle="bold"
+                  />
+
+              <View
+                  android:id="@+id/first_gattr_hr"
+                  style="@style/GroupedProductAttrHr"
+                  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/second_gattr_container"
+                style="@style/GroupedProductAttrContainer"
+                >
+
+              <TextView
+                  android:id="@+id/second_gattr"
+                  style="@style/GroupedProductAttrText"
+                  />
+
+              <View
+                  android:id="@+id/second_gattr_hr"
+                  style="@style/GroupedProductAttrHr"
+                  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/third_gattr_container"
+                style="@style/GroupedProductAttrContainer"
+                >
+
+              <TextView
+                  android:id="@+id/third_gattr"
+                  style="@style/GroupedProductAttrText"
+                  />
+
+              <View
+                  android:id="@+id/third_gattr_hr"
+                  style="@style/GroupedProductAttrHr"
+                  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fourth_gattr_container"
+                style="@style/GroupedProductAttrContainer"
+                >
+
+              <TextView
+                  android:id="@+id/fourth_gattr"
+                  style="@style/GroupedProductAttrText"
+                  />
+
+              <View
+                  android:id="@+id/fourth_gattr_hr"
+                  style="@style/GroupedProductAttrHr"
+                  />
+            </LinearLayout>
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/old_price"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="15dp"
+              android:gravity="center"
+              android:textColor="#787878"
+              android:textSize="14sp"
+              android:textStyle="normal"
+              android:visibility="gone"
+              />
+
+          <TextView
+              android:id="@+id/price"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="5dp"
+              android:gravity="center"
+              android:textColor="#000"
+              android:textSize="18sp"
+              android:textStyle="bold"
+              />
+
+          <LinearLayout
+              android:id="@+id/persons_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              >
+
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/brand_title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="15dp"
+              android:gravity="center"
+              android:text="Marka"
+              android:textColor="#000"
+              android:textSize="18sp"
+              android:textStyle="bold"
+              android:visibility="gone"
+              />
+
+          <TextView
+              android:id="@+id/brand"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="5dp"
+              android:gravity="center"
+              android:textColor="#000"
+              android:textSize="16sp"
+              android:textStyle="normal"
+              android:visibility="gone"
+              />
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="15dp"
+              android:background="#969a9f"
+              />
+
+          <TextView
+              android:id="@+id/description_title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="25dp"
+              android:gravity="center"
+              android:text="Ürün Açıklaması"
+              android:textColor="#313336"
+              android:textSize="24sp"
+              android:textStyle="bold"
+              android:visibility="gone"
+              />
+
+          <TextView
+              android:id="@+id/description_short"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="25dp"
+              android:ellipsize="end"
+              android:gravity="center"
+              android:maxLines="3"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:singleLine="false"
+              android:textColor="#404244"
+              android:textSize="16sp"
+              android:textStyle="normal"
+              android:visibility="gone"
+              />
+
+          <TextView
+              android:id="@+id/description_long"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="25dp"
+              android:gravity="center"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:singleLine="false"
+              android:textColor="#404244"
+              android:textSize="16sp"
+              android:textStyle="normal"
+              android:visibility="gone"
+              />
+
+          <android.support.v7.widget.AppCompatCheckBox
+              android:id="@+id/description_excol"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:button="@null"
+              android:drawableRight="@drawable/item_des_excol_selector"
+              android:focusable="false"
+              android:focusableInTouchMode="false"
+              android:gravity="center"
+              android:text="Açıklamanın Devamı"
+              android:visibility="gone"
+              />
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="15dp"
+              android:background="#969a9f"
+              />
+
+          <TextView
+              android:id="@+id/review_title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="25dp"
+              android:gravity="center"
+              android:text="Yorumlar"
+              android:textColor="#313336"
+              android:textSize="24sp"
+              android:textStyle="bold"
+              />
+
+          <android.support.v7.widget.CardView
+              android:id="@+id/review_card_first"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="20dp"
+              android:padding="10dp"
+              android:visibility="gone"
+              app:cardElevation="5dp"
+              >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                >
+
+              <TextView
+                  android:id="@+id/review_car_first_text"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:textSize="16sp"
+                  />
+
+              <TextView
+                  android:id="@+id/review_car_first_date"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:textSize="16sp"
+                  android:textStyle="bold"
+                  />
+
+            </LinearLayout>
+          </android.support.v7.widget.CardView>
+
+          <android.support.v7.widget.CardView
+              android:id="@+id/review_card_second"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="15dp"
+              android:padding="10dp"
+              android:visibility="gone"
+              app:cardElevation="5dp"
+              >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                >
+
+              <TextView
+                  android:id="@+id/review_car_second_text"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:textSize="16sp"
+                  />
+
+              <TextView
+                  android:id="@+id/review_car_second_date"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:textSize="16sp"
+                  android:textStyle="bold"
+                  />
+
+            </LinearLayout>
+          </android.support.v7.widget.CardView>
+
+          <TextView
+              android:id="@+id/review_others"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="20dp"
+              android:alpha="0.95"
+              android:drawablePadding="15dp"
+              android:drawableRight="@drawable/ic_expand"
+              android:gravity="center"
+              android:text="Yorumların Devamı"
+              android:textColor="#313336"
+              android:textSize="18sp"
+              android:textStyle="bold"
+              android:visibility="gone"
+              />
+
+          <TextView
+              android:id="@+id/review_no"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="20dp"
+              android:alpha="0.95"
+              android:gravity="center"
+              android:text="Henüz yorum yapılmadı!"
+              android:textColor="#313336"
+              android:textSize="16sp"
+              android:textStyle="normal"
+              android:visibility="gone"
+              />
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="15dp"
+              android:background="#969a9f"
+              />
+
+          <LinearLayout
+              android:id="@+id/otherProductsContainer"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              >
+
+            <TextView
+                android:id="@+id/benzer_urunler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="Benzer Ürünler"
+                android:textColor="#313336"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:id="@+id/otherProductsContainerOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1"
+                >
+
+              <android.support.v7.widget.CardView
+                  android:id="@+id/otherProduct_one_one"
+                  android:layout_width="0dp"
+                  android:layout_height="405dp"
+                  android:layout_margin="8dp"
+                  android:layout_weight="0.5"
+                  >
+
+                <RelativeLayout
+                    android:id="@+id/container_one_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                  <ImageView
+                      android:id="@+id/image_one_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="200dp"
+                      android:layout_alignParentTop="true"
+                      android:layout_centerHorizontal="true"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:paddingTop="3dp"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/title_one_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/image_one_one"
+                      android:layout_marginTop="20dp"
+                      android:gravity="center"
+                      android:maxLines="2"
+                      android:minLines="2"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:singleLine="false"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <View
+                      android:id="@+id/ruler_one_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_below="@id/title_one_one"
+                      android:layout_marginLeft="5dp"
+                      android:layout_marginRight="5dp"
+                      android:layout_marginTop="20dp"
+                      android:background="#ebebeb"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/oldPrice_one_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/ruler_one_one"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#adadad"
+                      android:textSize="16sp"
+                      android:textStyle="normal"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/price_one_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/oldPrice_one_one"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/price_one_one"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginTop="10dp"
+                      android:orientation="horizontal"
+                      >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/favorite_view_one_one"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_favorite_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/bell_view_one_one"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_bell_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+                  </LinearLayout>
+                </RelativeLayout>
+              </android.support.v7.widget.CardView>
+
+
+              <android.support.v7.widget.CardView
+                  android:id="@+id/otherProduct_one_two"
+                  android:layout_width="0dp"
+                  android:layout_height="405dp"
+                  android:layout_margin="8dp"
+                  android:layout_weight="0.5"
+                  android:visibility="invisible"
+                  >
+
+                <RelativeLayout
+                    android:id="@+id/container_one_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                  <ImageView
+                      android:id="@+id/image_one_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="200dp"
+                      android:layout_alignParentTop="true"
+                      android:layout_centerHorizontal="true"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:paddingTop="3dp"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/title_one_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/image_one_two"
+                      android:layout_marginTop="20dp"
+                      android:gravity="center"
+                      android:maxLines="2"
+                      android:minLines="2"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:singleLine="false"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <View
+                      android:id="@+id/ruler_one_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_below="@id/title_one_two"
+                      android:layout_marginLeft="5dp"
+                      android:layout_marginRight="5dp"
+                      android:layout_marginTop="20dp"
+                      android:background="#ebebeb"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/oldPrice_one_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/ruler_one_two"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#adadad"
+                      android:textSize="16sp"
+                      android:textStyle="normal"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/price_one_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/oldPrice_one_two"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/price_one_two"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginTop="10dp"
+                      android:orientation="horizontal"
+                      >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/favorite_view_one_two"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_favorite_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/bell_view_one_two"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_bell_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+                  </LinearLayout>
+
+                </RelativeLayout>
+              </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/otherProductsContainerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1"
+                >
+
+              <android.support.v7.widget.CardView
+                  android:id="@+id/otherProduct_two_one"
+                  android:layout_width="0dp"
+                  android:layout_height="405dp"
+                  android:layout_margin="8dp"
+                  android:layout_weight="0.5"
+                  >
+
+                <RelativeLayout
+                    android:id="@+id/container_two_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                  <ImageView
+                      android:id="@+id/image_two_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="200dp"
+                      android:layout_alignParentTop="true"
+                      android:layout_centerHorizontal="true"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:paddingTop="3dp"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/title_two_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/image_two_one"
+                      android:layout_marginTop="20dp"
+                      android:gravity="center"
+                      android:maxLines="2"
+                      android:minLines="2"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:singleLine="false"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <View
+                      android:id="@+id/ruler_two_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_below="@id/title_two_one"
+                      android:layout_marginLeft="5dp"
+                      android:layout_marginRight="5dp"
+                      android:layout_marginTop="20dp"
+                      android:background="#ebebeb"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/oldPrice_two_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/ruler_two_one"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#adadad"
+                      android:textSize="16sp"
+                      android:textStyle="normal"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/price_two_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/oldPrice_two_one"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/price_two_one"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginTop="10dp"
+                      android:orientation="horizontal"
+                      >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/favorite_view_two_one"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_favorite_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/bell_view_two_one"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_bell_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+                  </LinearLayout>
+                </RelativeLayout>
+              </android.support.v7.widget.CardView>
+
+
+              <android.support.v7.widget.CardView
+                  android:id="@+id/otherProduct_two_two"
+                  android:layout_width="0dp"
+                  android:layout_height="405dp"
+                  android:layout_margin="8dp"
+                  android:layout_weight="0.5"
+                  android:visibility="invisible"
+                  >
+
+                <RelativeLayout
+                    android:id="@+id/container_two_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                  <ImageView
+                      android:id="@+id/image_two_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="200dp"
+                      android:layout_alignParentTop="true"
+                      android:layout_centerHorizontal="true"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:paddingTop="3dp"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/title_two_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/image_two_two"
+                      android:layout_marginTop="20dp"
+                      android:gravity="center"
+                      android:maxLines="2"
+                      android:minLines="2"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:singleLine="false"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <View
+                      android:id="@+id/ruler_two_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_below="@id/title_two_two"
+                      android:layout_marginLeft="5dp"
+                      android:layout_marginRight="5dp"
+                      android:layout_marginTop="20dp"
+                      android:background="#ebebeb"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/oldPrice_two_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/ruler_two_two"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#adadad"
+                      android:textSize="16sp"
+                      android:textStyle="normal"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/price_two_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/oldPrice_two_two"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/price_two_two"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginTop="10dp"
+                      android:orientation="horizontal"
+                      >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/favorite_view_two_two"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_favorite_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/bell_view_two_two"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_bell_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+                  </LinearLayout>
+                </RelativeLayout>
+              </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/otherProductsContainerThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1"
+                >
+
+              <android.support.v7.widget.CardView
+                  android:id="@+id/otherProduct_three_one"
+                  android:layout_width="0dp"
+                  android:layout_height="405dp"
+                  android:layout_margin="8dp"
+                  android:layout_weight="0.5"
+                  >
+
+                <RelativeLayout
+                    android:id="@+id/container_three_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                  <ImageView
+                      android:id="@+id/image_three_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="200dp"
+                      android:layout_alignParentTop="true"
+                      android:layout_centerHorizontal="true"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:paddingTop="3dp"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/title_three_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/image_three_one"
+                      android:layout_marginTop="20dp"
+                      android:gravity="center"
+                      android:maxLines="2"
+                      android:minLines="2"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:singleLine="false"
+                      android:text=""
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <View
+                      android:id="@+id/ruler_three_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_below="@id/title_three_one"
+                      android:layout_marginLeft="5dp"
+                      android:layout_marginRight="5dp"
+                      android:layout_marginTop="20dp"
+                      android:background="#ebebeb"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/oldPrice_three_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/ruler_three_one"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#adadad"
+                      android:textSize="16sp"
+                      android:textStyle="normal"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/price_three_one"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/oldPrice_three_one"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/price_three_one"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginTop="10dp"
+                      android:orientation="horizontal"
+                      >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/favorite_view_three_one"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_favorite_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/bell_view_three_one"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_bell_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+                  </LinearLayout>
+                </RelativeLayout>
+              </android.support.v7.widget.CardView>
+
+
+              <android.support.v7.widget.CardView
+                  android:id="@+id/otherProduct_three_two"
+                  android:layout_width="0dp"
+                  android:layout_height="405dp"
+                  android:layout_margin="8dp"
+                  android:layout_weight="0.5"
+                  android:visibility="invisible"
+                  >
+
+                <RelativeLayout
+                    android:id="@+id/container_three_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                  <ImageView
+                      android:id="@+id/image_three_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="200dp"
+                      android:layout_alignParentTop="true"
+                      android:layout_centerHorizontal="true"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:paddingTop="3dp"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/title_three_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/image_three_two"
+                      android:layout_marginTop="20dp"
+                      android:gravity="center"
+                      android:maxLines="2"
+                      android:minLines="2"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:singleLine="false"
+                      android:text=""
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <View
+                      android:id="@+id/ruler_three_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_below="@id/title_three_two"
+                      android:layout_marginLeft="5dp"
+                      android:layout_marginRight="5dp"
+                      android:layout_marginTop="20dp"
+                      android:background="#ebebeb"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/oldPrice_three_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/ruler_three_two"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#adadad"
+                      android:textSize="16sp"
+                      android:textStyle="normal"
+                      />
+
+                  <android.support.v7.widget.AppCompatTextView
+                      android:id="@+id/price_three_two"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/oldPrice_three_two"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:text="İstanbul Nişantaşı City"
+                      android:textColor="#000"
+                      android:textSize="17sp"
+                      android:textStyle="bold"
+                      />
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/price_three_two"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginTop="10dp"
+                      android:orientation="horizontal"
+                      >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/favorite_view_three_two"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_favorite_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#26b0b6c0"
+                        >
+
+                      <CheckBox
+                          android:id="@+id/bell_view_three_two"
+                          android:layout_width="44dp"
+                          android:layout_height="44dp"
+                          android:layout_gravity="center"
+                          android:background="@drawable/item_bell_selector"
+                          android:button="@null"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="center"
+                          android:text=""
+                          />
+                    </FrameLayout>
+                  </LinearLayout>
+                </RelativeLayout>
+              </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+          </LinearLayout>
+
+          <Space
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              />
+        </LinearLayout>
+
+      </android.support.v7.widget.CardView>
+    </LinearLayout>
+  </android.support.v4.widget.NestedScrollView>
+  <!--</RelativeLayout>-->
+  <!--</android.support.design.widget.CoordinatorLayout>-->
+
+  <android.support.v7.widget.CardView
+      android:id="@+id/basketContainer"
+      android:layout_width="match_parent"
+      android:layout_height="70dp"
+      android:layout_alignParentBottom="true"
+      android:background="#fff"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          >
+
+        <ImageView
+            android:id="@+id/basket_minus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_plus"
+            android:gravity="center"
+            android:src="@drawable/ic_minus"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/basket_count_text"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="1"
+            android:textSize="20sp"
+            />
+
+        <ImageView
+            android:id="@+id/basket_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_plus"
+            android:gravity="center"
+            android:src="@drawable/ic_plus"
+            />
+      </LinearLayout>
+
+      <android.support.v7.widget.AppCompatButton
+          android:id="@+id/add_item_to_basket"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_add_basket"
+          android:enabled="false"
+          android:padding="10dp"
+          android:text="SEPETE EKLE"
+          android:textColor="#fff"
+          android:textSize="20dp"
+          android:textStyle="bold"
+          />
+    </LinearLayout>
+  </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

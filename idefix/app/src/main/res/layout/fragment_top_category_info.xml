@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="${relativePackage}.${activityClass}"
+    >
+
+  <LinearLayout
+      android:id="@+id/filter_list_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
+
+  </LinearLayout>
+
+  <!--android:background="#4d969a9f"-->
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/gridView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/filter_list_container"
+      android:background="#fff"
+      android:overScrollMode="never"
+      android:scrollbars="none"
+      />
+
+</RelativeLayout>

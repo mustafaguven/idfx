@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_bell_title"
+      android:gravity="left|center_vertical"
+      android:padding="15dp"
+      android:text="Fiyatı Düşünce Uyar"
+      android:textColor="#fff"
+      android:textStyle="bold"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="15dp"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+      <EditText
+          android:id="@+id/indays"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.5"
+          android:inputType="number"
+          />
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="0.5"
+          android:gravity="left|center_vertical"
+          android:paddingLeft="10dp"
+          android:text="gün içinde"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+      <EditText
+          android:id="@+id/below_price"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.5"
+          android:inputType="numberDecimal"
+          />
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="0.5"
+          android:gravity="left|center_vertical"
+          android:paddingLeft="10dp"
+          android:text="fiyatına düşerse"
+          />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center_vertical"
+        android:text="bana haber ver."
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+      <Button
+          android:id="@+id/cancel"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="5dp"
+          android:layout_weight="0.5"
+          android:background="@drawable/bg_cancel_bell_dialog"
+          android:text="İPTAL"
+          android:textColor="#b0b6c0"
+          android:textStyle="bold"
+          />
+
+      <Button
+          android:id="@+id/ok"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.5"
+          android:background="@drawable/bg_ok_bell_dialog"
+          android:text="TAMAM"
+          android:textColor="#fff"
+          android:textStyle="bold"
+          />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

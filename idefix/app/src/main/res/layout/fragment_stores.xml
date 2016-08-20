@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="tr.com.idefix.android.view.fragments.StoresFragment"
+    >
+
+  <android.support.v7.widget.AppCompatTextView
+      android:id="@+id/city_selector_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:gravity="center"
+      android:paddingBottom="10dp"
+      android:paddingTop="10dp"
+      android:text="@string/choose_city"
+      android:textColor="#000"
+      android:textStyle="bold"
+      />
+
+  <RelativeLayout
+      android:id="@+id/city_selector_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/city_selector_title"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:background="@drawable/bg_cities"
+      android:padding="1dp"
+      >
+
+
+    <!--style="@style/Widget.AppCompat.Spinner"-->
+    <!--android:dropDownSelector="?android:selectableItemBackground"-->
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/city_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:overScrollMode="never"
+        android:spinnerMode="dropdown"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/spinner_triangle"
+        />
+  </RelativeLayout>
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/addresses"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/city_selector_container"
+      android:layout_marginTop="15dp"
+      android:overScrollMode="never"
+      android:scrollbars="vertical"
+      />
+</RelativeLayout>

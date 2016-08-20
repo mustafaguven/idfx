@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_favourites_adapter_item"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:weightSum="10"
+    >
+
+  <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="170dp"
+      android:layout_weight="3"
+      >
+
+    <ImageView
+        android:id="@+id/imgPicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        tools:src="@drawable/barcode_sample"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="5dp"
+      android:layout_marginTop="20dp"
+      android:layout_weight="7"
+      android:orientation="vertical"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        >
+
+      <ImageView
+          android:id="@+id/imgCheck"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_alignParentRight="true"
+          android:layout_centerInParent="true"
+          android:layout_marginLeft="3dp"
+          android:src="@drawable/ic_checked"
+          />
+
+      <TextView
+          android:id="@+id/lblTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_toLeftOf="@id/imgCheck"
+          android:singleLine="true"
+          android:textSize="16sp"
+          tools:text="Küçük Prens"
+          />
+
+      <TextView
+          android:id="@+id/lblCategoryName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@id/lblTitle"
+          android:layout_toLeftOf="@id/imgCheck"
+          android:text=""
+          android:textSize="16sp"
+          android:textStyle="bold"
+          />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+      <TextView
+          android:id="@+id/lblShippingStatus"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:textSize="16sp"
+          tools:text="Henüz sevkiyat yapılmadı"
+          />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:text="@string/unit"
+          android:textSize="16sp"
+          />
+
+      <TextView
+          android:id="@+id/lblUnit"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          tools:text="1"
+          />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:text="@string/unit_price"
+          android:textSize="16sp"
+          />
+
+      <TextView
+          android:id="@+id/lblUnitPrice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          tools:text="99TL"
+          />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:text="@string/total_price"
+          android:textSize="16sp"
+          />
+
+      <TextView
+          android:id="@+id/lblTotalPrice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          tools:text="99TL"
+          />
+    </RelativeLayout>
+
+  </LinearLayout>
+
+</LinearLayout>

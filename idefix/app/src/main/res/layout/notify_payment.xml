@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_toolbar_red"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:text="@string/notify_payment"
+          android:textColor="#fff"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          />
+
+    </RelativeLayout>
+  </android.support.v7.widget.Toolbar>
+
+
+  <RelativeLayout
+      android:id="@+id/rlSube"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/toolbar"
+      android:layout_marginTop="10dp"
+      >
+
+    <TextView
+        android:id="@+id/lblSube"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Şube"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/ddlSube"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblSube"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_spinner"
+        android:padding="0dp"
+        android:popupBackground="#cccccc"
+        android:spinnerMode="dialog"
+
+        />
+
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/rlSube"
+      android:layout_marginTop="10dp"
+      >
+
+    <TextView
+        android:id="@+id/lblDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Tarih"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblDate"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_spinner"
+        android:gravity="left|center"
+        android:paddingBottom="0dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:text="Seçiniz"
+        android:textColor="#000000"
+        />
+
+  </RelativeLayout>
+
+
+  <RelativeLayout
+      android:id="@+id/rlNote"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/rlDate"
+      android:layout_marginTop="10dp"
+      >
+
+    <TextView
+        android:id="@+id/lblNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sipariş Notu"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/txtNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblNote"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_cities"
+        android:gravity="top|left"
+        android:lines="5"
+
+        />
+
+  </RelativeLayout>
+
+  <android.support.v7.widget.AppCompatButton
+      android:id="@+id/btnSend"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/rlNote"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/bg_login_button"
+      android:text="@string/send"
+      android:textColor="#fff"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      />
+
+
+</RelativeLayout>

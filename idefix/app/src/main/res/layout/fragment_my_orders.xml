@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    >
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/rvOrders"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:overScrollMode="never"
+      android:padding="10dp"
+      android:visibility="gone"
+      />
+
+  <RelativeLayout
+      android:id="@+id/rlNoOrder"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="15dp"
+      android:visibility="gone"
+      >
+
+    <ImageView
+        android:id="@+id/imgNoOrder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_basket_bold_big"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgNoOrder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/no_order_found"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+  </RelativeLayout>
+
+</LinearLayout>

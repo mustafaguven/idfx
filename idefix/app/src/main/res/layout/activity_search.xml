@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity"
+    >
+
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_toolbar_red"
+      app:layout_scrollFlags="scroll|enterAlways"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/category_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:layout_toLeftOf="@id/search_icon"
+          android:layout_toStartOf="@id/search_icon"
+          android:gravity="left"
+          android:text="@string/search_result"
+          android:textColor="#fff"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          />
+
+      <tr.com.idefix.android.view.components.BasketViewComponent
+          android:id="@+id/basket_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="25dp"
+          android:visibility="gone"
+          />
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/basket_count"
+          android:layout_width="16dp"
+          android:layout_height="16dp"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginRight="16dp"
+          android:background="@drawable/bg_basket_count"
+          android:gravity="center"
+          android:textColor="#fff"
+          android:textSize="12sp"
+          android:textStyle="bold"
+          android:visibility="invisible"
+          />
+
+      <tr.com.idefix.android.view.components.SearchViewComponent
+          android:id="@+id/search_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="25dp"
+          android:layout_toLeftOf="@id/basket_icon"
+          android:visibility="gone"
+          />
+
+      <TextView
+          android:id="@+id/btnCollapse"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/bg_search_collapse"
+          android:text="@string/collapse"
+          android:textColor="#FFFFFF"
+          android:visibility="gone"
+          />
+
+    </RelativeLayout>
+  </android.support.v7.widget.Toolbar>
+
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/toolbar"
+      android:background="@drawable/bg_filter_ok_button"
+      >
+
+    <RelativeLayout
+        android:id="@+id/rlSearchComponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_favourites_adapter_item"
+        android:padding="10dp"
+        >
+
+      <ImageView
+          android:id="@+id/imgClear"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_alignParentRight="true"
+          android:layout_centerInParent="true"
+          android:layout_marginLeft="5dp"
+          android:layout_marginRight="5dp"
+          android:src="@drawable/ic_big_close"
+          />
+
+      <ImageView
+          android:id="@+id/imgMagnif"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_alignParentLeft="true"
+          android:layout_centerInParent="true"
+          android:layout_marginLeft="5dp"
+          android:layout_marginRight="5dp"
+          android:src="@drawable/ic_search"
+          />
+
+
+      <android.support.v7.widget.AppCompatEditText
+          android:id="@+id/txtSearch"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_toLeftOf="@id/imgClear"
+          android:layout_toRightOf="@id/imgMagnif"
+          android:background="@null"
+          android:digits="abcçdefgğhıijklmnoöpqrsştuüvwxyz1234567890 "
+          android:enabled="true"
+          android:hint="@string/search"
+          android:imeOptions="actionSearch"
+          android:paddingBottom="15dp"
+          android:paddingTop="15dp"
+          android:singleLine="true"
+          android:text=""
+          />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlResultInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/rlSearchComponent"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone"
+        >
+
+      <android.support.v7.widget.AppCompatSpinner
+          android:id="@+id/ddlOrder"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentRight="true"
+
+          android:spinnerMode="dialog"
+          />
+
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblCount"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_alignParentLeft="true"
+          android:layout_toLeftOf="@id/ddlOrder"
+          android:gravity="left|center"
+          android:singleLine="true"
+          android:textSize="18sp"
+          />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lnFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlResultInfo"
+        android:orientation="vertical"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rlBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnFilters"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_cities"
+        android:padding="10dp"
+        >
+      <ImageView
+          android:id="@+id/imgBarcode"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:src="@drawable/barcode_small"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="5dp"
+          android:layout_toRightOf="@id/imgBarcode"
+          android:text="Barkod ile Arama"
+          />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlBarcode"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="8dp"
+        android:overScrollMode="never"
+        android:visibility="visible"
+        />
+
+
+  </RelativeLayout>
+
+</RelativeLayout>

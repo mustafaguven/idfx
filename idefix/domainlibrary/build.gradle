@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+
+  def globalConfiguration = rootProject.extensions.getByName("ext")
+
+  compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
+  buildToolsVersion globalConfiguration.getAt("androidBuildToolsVersion")
+
+  defaultConfig {
+    minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
+    targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
+
+    versionCode 1
+    versionName "1.0"
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  packagingOptions {
+    exclude 'LICENSE.txt'
+    exclude 'META-INF/DEPENDENCIES'
+    exclude 'META-INF/ASL2.0'
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/LICENSE'
+  }
+
+  lintOptions {
+    quiet true
+    abortOnError false
+    ignoreWarnings true
+    disable 'InvalidPackage' // Some libraries have issues with this
+    disable 'OldTargetApi'
+    // Due to Robolectric that modifies the manifest when running tests
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+
+  compile project(':data')
+  compile project(':commonlibrary')
+
+  def domainDependencies = rootProject.ext.domainDependencies
+  //    def domainTestDependencies = rootProject.ext.domainTestDependencies
+
+  compile domainDependencies.dagger
+  apt domainDependencies.daggerCompiler
+
+  provided domainDependencies.javaxAnnotation
+  provided domainDependencies.lombok
+  apt domainDependencies.lombok
+
+
+  compile domainDependencies.rxJava
+  compile domainDependencies.rxAndroid
+  compile domainDependencies.timber
+  compile domainDependencies.otto
+
+  //    testCompile domainTestDependencies.junit
+  //    testCompile domainTestDependencies.mockito
+}

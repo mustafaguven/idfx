@@ -1,0 +1,25 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+
+    <include layout="@layout/toolbar_review"/>
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="tr.com.idefix.android.view.fragments.ReviewFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_review"
+        />
+  </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_toolbar_stores"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:text="@string/barcode"
+          android:textColor="#fff"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          />
+
+    </RelativeLayout>
+  </android.support.v7.widget.Toolbar>
+
+  <RelativeLayout
+      android:id="@+id/rlInfo"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_below="@id/toolbar"
+      android:visibility="visible"
+      >
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/barcode_text_1"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/barcode_text_2"
+        android:textColor="#000"
+
+        />
+
+    <ImageView
+        android:id="@+id/imgBarcode"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/text_2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/barcode_sample"
+        />
+
+    <CheckBox
+        android:id="@+id/chkDoNotShowAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgBarcode"
+        android:layout_marginLeft="10dp"
+        android:text="@string/do_not_show_again"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkDoNotShowAgain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_login_button"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/continue_text"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+  </RelativeLayout>
+
+
+</RelativeLayout>

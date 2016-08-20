@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:padding="10dp"
+    >
+
+  <android.support.v7.widget.AppCompatTextView
+      android:id="@+id/section_text"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignParentLeft="true"
+      android:gravity="center_vertical"
+      android:singleLine="true"
+      android:textAllCaps="false"
+      android:textColor="#3e4043"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      />
+
+
+  <!--    <android.support.v7.widget.AppCompatSpinner
+          android:drawableRight="@drawable/ic_right_all"
+          android:drawablePadding="10dp"
+          android:text="@string/all"
+          android:id="@+id/sort_spinner"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_toRightOf="@id/section_text"
+          android:layout_marginLeft="25dp"
+          android:layout_alignParentRight="true"
+          android:gravity="center_vertical"
+          android:paddingRight="16dp"
+          android:singleLine="true"
+          android:textAllCaps="false"
+          android:textColor="#969a9f"
+          android:textSize="16sp"
+          android:spinnerMode="dialog"
+          android:textStyle="bold" />-->
+
+  <android.support.v7.widget.AppCompatSpinner
+      android:id="@+id/sort_spinner"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignParentRight="true"
+      android:spinnerMode="dialog"
+      />
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "23.0.2"
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 23
+    androidCompileSdkVersion = 23
+
+    def verSupport = "23.1.1"
+    //Libraries
+    recyclerViewVersion = "${verSupport}"
+    androidAnnotationsVersion = "${verSupport}"
+    supportAnnotationsVersion = "${verSupport}"
+    customtabsVersion = "${verSupport}"
+    supportDesignVersion = "${verSupport}"
+    supportCardViewVersion = "${verSupport}"
+    appcompatVersion = "${verSupport}"
+    daggerVersion = '2.0.1'
+    butterKnifeVersion = '7.0.1'
+    jodaVersion = "2.9.0"
+    rxJavaVersion = '1.0.15'
+    rxAndroidVersion = '1.0.1'
+    javaxAnnotationVersion = '10.0-b28'
+    gsonVersion = '2.3.1'
+    okHttpVersion = '2.5.0'
+    lombokVersion = '1.16.6'
+    timberVersion = '3.1.0'
+    retrofitVersion = '1.9.0'
+//    retrofitVersion = '2.0.0-beta1'
+    picassoVersion = "2.5.2"
+    ottoVersion = "1.3.8"
+    supportVersion = "24.0.0"
+
+    //Testing
+    robolectricVersion = '3.0'
+    jUnitVersion = '4.12'
+    assertJVersion = '1.7.1'
+    mockitoVersion = '1.9.5'
+    dexmakerVersion = '1.0'
+    espressoVersion = '2.0'
+    testingSupportLibVersion = '0.1'
+
+    commonLibraryDependencies = [
+            daggerCompiler : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger         : "com.google.dagger:dagger:${daggerVersion}",
+            butterKnife    : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            timber         : "com.jakewharton.timber:timber:${timberVersion}",
+            recyclerView   : "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+            gson           : "com.google.code.gson:gson:${gsonVersion}",
+            appcompat      : "com.android.support:appcompat-v7:${appcompatVersion}",
+            rxJava         : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid      : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation: "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+            lombok         : "org.projectlombok:lombok:${lombokVersion}",
+            customtabs     : "com.android.support:customtabs:${customtabsVersion}",
+            joda           : "net.danlew:android.joda:${jodaVersion}",
+    ]
+
+    presentationDependencies = [
+            daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger            : "com.google.dagger:dagger:${daggerVersion}",
+            butterKnife       : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            timber            : "com.jakewharton.timber:timber:${timberVersion}",
+            recyclerView      : "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+            appcompat         : "com.android.support:appcompat-v7:${appcompatVersion}",
+            rxJava            : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid         : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation   : "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+            lombok            : "org.projectlombok:lombok:${lombokVersion}",
+            picasso           : "com.squareup.picasso:picasso:${picassoVersion}",
+            supportAnnotations: "com.android.support:support-annotations:${supportAnnotationsVersion}",
+            supportDesign     : "com.android.support:design:${supportDesignVersion}",
+            supportCardView   : "com.android.support:cardview-v7:${supportCardViewVersion}",
+            otto              : "com.squareup:otto:${ottoVersion}",
+            support           : "com.android.support:support-v4:${supportVersion}",
+    ]
+
+    presentationTestDependencies = [
+            mockito          : "org.mockito:mockito-core:${mockitoVersion}",
+            dexmaker         : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            dexmakerMockito  : "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            espresso         : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            testingSupportLib: "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+    ]
+
+    domainDependencies = [
+            daggerCompiler : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger         : "com.google.dagger:dagger:${daggerVersion}",
+            javaxAnnotation: "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+            rxJava         : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid      : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            lombok         : "org.projectlombok:lombok:${lombokVersion}",
+            timber         : "com.jakewharton.timber:timber:${timberVersion}",
+            otto           : "com.squareup:otto:${ottoVersion}",
+    ]
+
+    domainTestDependencies = [
+            junit  : "junit:junit:${jUnitVersion}",
+            mockito: "org.mockito:mockito-core:${mockitoVersion}",
+    ]
+
+    dataDependencies = [
+            daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger            : "com.google.dagger:dagger:${daggerVersion}",
+            okHttp            : "com.squareup.okhttp:okhttp:${okHttpVersion}",
+            gson              : "com.google.code.gson:gson:${gsonVersion}",
+            rxJava            : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid         : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation   : "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            lombok            : "org.projectlombok:lombok:${lombokVersion}",
+            retrofit          : "com.squareup.retrofit:retrofit:${retrofitVersion}"
+    ]
+
+    dataTestDependencies = [
+            junit      : "junit:junit:${jUnitVersion}",
+            assertj    : "org.assertj:assertj-core:${assertJVersion}",
+            mockito    : "org.mockito:mockito-core:${mockitoVersion}",
+            robolectric: "org.robolectric:robolectric:${robolectricVersion}",
+    ]
+}

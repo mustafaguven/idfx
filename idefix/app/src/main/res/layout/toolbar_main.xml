@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/bg_main_header"
+    android:paddingTop="0dp"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="?android:attr/actionBarSize"
+      >
+
+    <ImageView
+        android:id="@+id/ic_search"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_search_white"
+        />
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/login"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/ic_login"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/login_text"
+        android:src="@drawable/ic_login_person"
+        />
+
+    <RelativeLayout
+        android:id="@+id/basket_container"
+        android:layout_width="50dp"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        >
+
+      <tr.com.idefix.android.view.components.BasketViewComponent
+          android:id="@+id/basket_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="10dp"
+          />
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/basket_count"
+          android:layout_width="16dp"
+          android:layout_height="16dp"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginRight="3dp"
+          android:layout_marginTop="13dp"
+          android:background="@drawable/bg_basket_count"
+          android:gravity="center"
+          android:textColor="#fff"
+          android:textSize="12sp"
+          android:textStyle="bold"
+          android:visibility="invisible"
+          />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/barcode_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="65dp"
+        android:layout_toLeftOf="@+id/basketContainer"
+        android:src="@drawable/barcode_white"
+        />
+
+  </RelativeLayout>
+</android.support.v7.widget.Toolbar>

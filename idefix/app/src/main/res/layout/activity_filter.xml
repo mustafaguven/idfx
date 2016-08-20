@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:paddingBottom="10dp"
+    tools:context="${relativePackage}.${activityClass}"
+    >
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_toolbar_red"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      app:layout_scrollFlags="scroll|enterAlways"
+      >
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/category_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:gravity="left"
+          android:text="LİSTEYİ FİLTRELE"
+          android:textColor="#fff"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          />
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="15dp"
+          android:background="@drawable/bg_filter_ok_button"
+          >
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="TAMAM"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+      </LinearLayout>
+
+    </RelativeLayout>
+  </android.support.v7.widget.Toolbar>
+
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/gridView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/clear_filter"
+      android:layout_below="@id/toolbar"
+      android:background="#ffffff"
+      android:overScrollMode="never"
+      android:scrollbars="none"
+      />
+
+  <android.support.v7.widget.AppCompatButton
+      android:id="@+id/clear_filter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_centerVertical="true"
+      android:background="@drawable/bg_filter_clear_button"
+      android:gravity="center"
+      android:paddingLeft="15dp"
+      android:paddingRight="15dp"
+      android:text="FİLTREYİ SIFIRLA"
+      android:textColor="#fff"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      />
+</RelativeLayout>

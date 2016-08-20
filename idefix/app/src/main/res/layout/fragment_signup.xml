@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    >
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="visible"
+        >
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblDescription"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="20dp"
+          android:gravity="center"
+          android:text="@string/sign_up_description"
+          android:textColor="#000000"
+          android:textSize="20sp"
+          />
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/lblDescription"
+          android:layout_marginBottom="10dp"
+          android:gravity="center"
+          android:text="@string/name"
+          android:textColor="#000000"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          />
+
+      <android.support.v7.widget.AppCompatEditText
+          android:id="@+id/txtName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/lblName"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/bg_cities"
+          android:padding="15dp"
+          android:singleLine="true"
+          android:text=""
+          />
+
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblSurname"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtName"
+          android:layout_marginBottom="10dp"
+          android:gravity="center"
+          android:text="@string/surname"
+          android:textColor="#000000"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          />
+
+      <android.support.v7.widget.AppCompatEditText
+          android:id="@+id/txtSurname"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/lblSurname"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/bg_cities"
+          android:padding="15dp"
+          android:singleLine="true"
+          android:text=""
+          />
+
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblSex"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtSurname"
+          android:layout_marginBottom="10dp"
+          android:gravity="center"
+          android:text="@string/sex"
+          android:textColor="#000000"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          />
+
+      <android.support.v7.widget.AppCompatSpinner
+          android:id="@+id/ddlSex"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/lblSex"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/bg_spinner"
+          android:padding="0dp"
+          android:popupBackground="#cccccc"
+          android:spinnerMode="dialog"
+          />
+
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblMail"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/ddlSex"
+          android:layout_marginBottom="10dp"
+          android:gravity="center"
+          android:text="@string/email"
+          android:textColor="#000000"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          />
+
+      <android.support.v7.widget.AppCompatEditText
+          android:id="@+id/txtMail"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/lblMail"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/bg_cities"
+          android:padding="15dp"
+          android:singleLine="true"
+          android:text=""
+          />
+
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblPassword"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtMail"
+          android:layout_marginBottom="10dp"
+          android:gravity="center"
+          android:text="@string/password"
+          android:textColor="#000000"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          />
+
+      <android.support.v7.widget.AppCompatEditText
+          android:id="@+id/txtPassword"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/lblPassword"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/bg_cities"
+          android:inputType="textPassword"
+          android:padding="15dp"
+          android:singleLine="true"
+          android:text=""
+          />
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblPasswordConfirm"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtPassword"
+          android:layout_marginBottom="10dp"
+          android:gravity="center"
+          android:text="@string/confirm_password"
+          android:textColor="#000000"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          />
+
+      <android.support.v7.widget.AppCompatEditText
+          android:id="@+id/txtPasswordConfirm"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/lblPasswordConfirm"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/bg_cities"
+          android:inputType="textPassword"
+          android:padding="15dp"
+          android:singleLine="true"
+          android:text=""
+          />
+
+      <android.support.v7.widget.AppCompatCheckBox
+          android:id="@+id/chCampaign"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtPasswordConfirm"
+          android:layout_marginBottom="20dp"
+          android:text="@string/let_us_inform_you_about_our_campaigns"
+          android:textSize="20sp"
+          />
+
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblPrivacyDesc"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/chCampaign"
+          android:layout_marginBottom="10dp"
+          android:gravity="center"
+          android:text="@string/signup_privacy_desc"
+          android:textColor="#000000"
+          android:textSize="13sp"
+          />
+
+      <android.support.v7.widget.AppCompatCheckBox
+          android:id="@+id/chAgreementApprove"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/lblPrivacyDesc"
+          android:layout_marginBottom="20dp"
+          />
+
+      <android.support.v7.widget.AppCompatTextView
+          android:id="@+id/lblAggreementDescription"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/lblPrivacyDesc"
+          android:layout_marginBottom="10dp"
+          android:layout_toRightOf="@id/chAgreementApprove"
+          android:gravity="left|center"
+          android:text="@string/signup_aggreement_approve"
+          android:textColor="#000000"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          />
+
+      <android.support.v7.widget.AppCompatButton
+          android:id="@+id/btnBecomeAMember"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/chAgreementApprove"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/bg_login_button"
+          android:text="@string/become_a_member"
+          android:textColor="#fff"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          />
+
+    </RelativeLayout>
+
+
+  </ScrollView>
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/switchButtonContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_switch_button_back"
+    >
+
+  <RelativeLayout
+      android:id="@+id/selectedBackground"
+      android:layout_width="100dp"
+      android:layout_height="match_parent"
+      android:background="@color/gray_light"
+      android:gravity="center"
+      >
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/btnFirst"
+      android:layout_width="100dp"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      >
+
+    <TextView
+        android:id="@+id/lblFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+  </RelativeLayout>
+
+
+  <RelativeLayout
+      android:id="@+id/btnSecond"
+      android:layout_width="100dp"
+      android:layout_height="match_parent"
+      android:layout_toRightOf="@id/btnFirst"
+      android:gravity="center"
+      >
+
+    <TextView
+        android:id="@+id/lblSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_dark"
+        android:textSize="20sp"
+        />
+
+  </RelativeLayout>
+
+
+</RelativeLayout>

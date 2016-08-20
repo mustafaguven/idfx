@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">CommonLibrary</string>
+  <string name="today">Bugün</string>
+  <string name="tomorrow">Yarın</string>
+</resources>

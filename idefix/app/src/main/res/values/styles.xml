@@ -1,0 +1,159 @@
+<resources>
+
+  <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <!-- colorPrimary is used, for instance, for the default ActionBar
+         (but not Toolbar) background.
+          We specify the same color for the toolbar background in
+          toolbar.xml.. -->
+    <item name="colorPrimary">#00000000</item>
+
+    <!-- colorPrimaryDark is used for the status bar (with the
+         battery, clock, etc). -->
+    <item name="colorPrimaryDark">#284a94</item>
+
+    <!-- colorAccent is used as the default value for
+         colorControlActivated which is used to tint widgets. -->
+    <item name="colorAccent">#284a94</item>
+
+    <item name="colorControlNormal">#284a94</item>
+    <!--<item name="colorControlNormal">#ae0cef</item>-->
+
+    <item name="android:spinnerStyle">@style/AppSpinner</item>
+
+    <!--<item name="textAllCaps">false</item>-->
+
+    <!--<item name="android:colorBackground">#f00</item>-->
+    <!--<item name="android:textColorSecondary">@color/textColorSecondary</item>-->
+  </style>
+
+  <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+    <item name="tabTextAppearance">@style/MyCustomTextAppearance</item>
+    <item name="tabSelectedTextColor">#fff</item>
+  </style>
+
+  <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+    <item name="textAllCaps">false</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:textColor">#96ffffff</item>
+  </style>
+
+  <style name="AppSpinner" parent="Widget.AppCompat.Spinner">
+    <item name="colorAccent">#284a94</item>
+    <item name="colorPrimary">#bc0b0b</item>
+    <item name="colorControlNormal">#24d514</item>
+  </style>
+
+  <style name="main_bottom_menu">
+    <!--<item name="android:background">#00ffb7</item>-->
+    <item name="android:background">@null</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">@color/secondory_menu_color</item>
+    <item name="android:textSize">15sp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:paddingBottom">20dp</item>
+    <item name="android:paddingTop">20dp</item>
+  </style>
+
+  <style name="main_bottom_login_menu">
+    <item name="android:layout_width">25dp</item>
+    <item name="android:layout_height">25dp</item>
+    <item name="android:layout_marginRight">36dp</item>
+    <item name="android:background">@null</item>
+  </style>
+
+  <style name="login_input_layout">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_centerHorizontal">true</item>
+    <item name="android:layout_marginLeft">15dp</item>
+    <item name="android:layout_marginRight">15dp</item>
+    <item name="android:layout_marginTop">15dp</item>
+    <item name="android:paddingLeft">10dp</item>
+    <item name="android:paddingRight">10dp</item>
+    <item name="android:paddingTop">5dp</item>
+  </style>
+
+  <style name="product_detail_check">
+    <item name="android:layout_width">50dp</item>
+    <item name="android:layout_height">50dp</item>
+    <item name="android:layout_gravity">center</item>
+    <item name="android:button">@null</item>
+    <item name="android:focusable">false</item>
+    <item name="android:focusableInTouchMode">false</item>
+    <item name="android:gravity">center</item>
+    <item name="android:text"></item>
+  </style>
+
+  <style name="product_detail_check_text">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">#a7a7a7</item>
+  </style>
+
+  <style name="product_detail_check_text_container">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_weight">0.25</item>
+    <item name="android:orientation">vertical</item>
+  </style>
+
+  <style name="DNRCustomDialog" parent="@style/Theme.AppCompat.Dialog">
+    <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+    <item name="android:windowBackground">@color/transparent</item>
+    <item name="android:textColorPrimary">#FFFFFF</item>
+    <item name="android:backgroundDimEnabled">true</item>
+    <item name="android:textColor">#FFFFFF</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:textSize">12sp</item>
+  </style>
+
+  <style name="CustomAlertDialogStyle">
+    <item name="android:bottomBright">@color/transparent</item>
+    <item name="android:bottomDark">@color/transparent</item>
+    <item name="android:bottomMedium">@color/transparent</item>
+    <item name="android:centerBright">@color/transparent</item>
+    <item name="android:centerDark">@color/transparent</item>
+    <item name="android:centerMedium">@color/transparent</item>
+    <item name="android:fullBright">@color/transparent</item>
+    <item name="android:fullDark">@color/transparent</item>
+    <item name="android:topBright">@color/transparent</item>
+    <item name="android:topDark">@color/transparent</item>
+  </style>
+
+  <style name="GroupedProductAttrContainer">
+    <item name="android:bottomBright">@color/transparent</item>
+    <item name="android:layout_marginLeft">5dp</item>
+    <item name="android:layout_marginRight">5dp</item>
+    <item name="android:visibility">gone</item>
+    <item name="android:orientation">vertical</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="GroupedProductAttrText">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_gravity">center</item>
+    <item name="android:ellipsize">middle</item>
+    <item name="android:gravity">center</item>
+    <item name="android:paddingLeft">5dp</item>
+    <item name="android:paddingRight">5dp</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:text">first attr</item>
+    <item name="android:textColor">#969a9f</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="GroupedProductAttrHr">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">4dp</item>
+    <item name="android:layout_marginTop">15dp</item>
+    <item name="android:background">#969a9f</item>
+  </style>
+</resources>

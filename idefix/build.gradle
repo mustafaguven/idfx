@@ -1,0 +1,60 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'buildSystem/ci.gradle'
+apply from: 'buildSystem/dependencies.gradle'
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url 'https://repos.zeroturnaround.com/nexus/content/repositories/zt-public-releases'
+        }
+        maven {
+            url "http://dl.bintray.com/microsoftazuremobile/SDK"
+        }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.7'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.2'
+        classpath 'com.newrelic.agent.android:agent-gradle-plugin:5.6.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    ext {
+        androidApplicationId = 'tr.com.idefix.android'
+        androidVersionCode = 1
+        androidVersionName = "1.0.0"
+        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+        testApplicationId = 'tr.com.idefix.android.internal.di.test'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    description 'Creates the gradle wrapper.'
+    gradleVersion '2.4'
+}
+
+task runDomainUnitTests(dependsOn: [':domain:test']) {
+    description 'Run unit tests for both domain and data layers.'
+}
+
+task runDataUnitTests(dependsOn: [':data:cleanTestDebug', ':data:testDebug']) {
+    description 'Run unit tests for both domain and data layers.'
+}
+
+task runUnitTests(dependsOn: ['runDomainUnitTests', 'runDataUnitTests']) {
+    description 'Run unit tests for both domain and data layers.'
+}
+
+task runAcceptanceTests(dependsOn: [':presentation:connectedAndroidTest']) {
+    description 'Run application acceptance tests.'
+}

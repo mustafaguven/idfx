@@ -1,0 +1,3 @@
+include ':app', ':data', ':commonlibrary', ':domainlibrary'
+include ':viewpagerindicatorlibrary'
+include ':infiniteviewpager'

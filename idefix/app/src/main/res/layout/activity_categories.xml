@@ -1,0 +1,116 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <android.support.design.widget.AppBarLayout
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <!--app:layout_scrollFlags="scroll|enterAlways"-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_toolbar_stores"
+        >
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          >
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/category_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:text="@string/menu"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/barcode_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="55dp"
+            android:layout_toLeftOf="@+id/basket_icon"
+            android:src="@drawable/barcode_white"
+            />
+
+
+        <tr.com.idefix.android.view.components.BasketViewComponent
+            android:id="@+id/basket_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/basket_count"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_basket_count"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+
+        <tr.com.idefix.android.view.components.SearchViewComponent
+            android:id="@+id/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/basket_icon"
+            />
+      </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <!--app:layout_scrollFlags="scroll|enterAlways"-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_toolbar_stores"
+        style="@style/MyCustomTabLayout"
+        />
+
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.v4.view.ViewPager
+      android:id="@+id/view_pager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      />
+
+  <!--app:layout_behavior="tr.com.dr.android.components.ScrollAwareFABBehavior"-->
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/filter_action"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|right"
+      android:layout_margin="16dp"
+      android:src="@drawable/ic_menu"
+      android:visibility="gone"
+      app:layout_anchorGravity="bottom|right|end"
+      />
+
+  <!--app:layout_anchor="@id/lvToDoList"-->
+</android.support.design.widget.CoordinatorLayout>

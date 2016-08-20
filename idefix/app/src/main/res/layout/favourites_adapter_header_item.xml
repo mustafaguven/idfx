@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/bg_favourites_adapter_header_item"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlSelectAll"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_centerInParent="true"
+      >
+
+    <ImageView
+        android:id="@+id/imgSelectAll"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_unchecked"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgSelectAll"
+        android:layout_marginTop="3dp"
+        android:text=""
+        />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlPurchase"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:layout_toLeftOf="@id/rlSelectAll"
+      android:alpha="0"
+      android:padding="5dp"
+      >
+
+    <ImageView
+        android:id="@+id/imgPurchase"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_basket"
+        />
+
+    <TextView
+        android:id="@+id/lblPurchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgPurchase"
+        android:layout_marginTop="3dp"
+        android:text="@string/purchase_it"
+        android:textColor="@color/gray_light_font"
+        android:textStyle="bold"
+        />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlDelete"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:layout_toLeftOf="@id/rlPurchase"
+      android:alpha="0"
+      android:padding="5dp"
+      >
+
+    <ImageView
+        android:id="@+id/imgDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_delete"
+        />
+
+    <TextView
+        android:id="@+id/lblDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgDelete"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="3dp"
+        android:text="@string/remove_it"
+        android:textColor="@color/gray_light_font"
+        android:textStyle="bold"
+        />
+
+  </RelativeLayout>
+
+</RelativeLayout>

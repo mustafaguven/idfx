@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    >
+
+  <LinearLayout style="@style/product_detail_check_text_container">
+
+    <CheckBox
+        android:id="@+id/favorite_view"
+        android:background="@drawable/item_favorite_selector_big"
+        android:text=""
+        style="@style/product_detail_check"
+        />
+
+    <TextView
+        android:id="@+id/lblFavorile"
+        android:text="FAVORİLE"
+        style="@style/product_detail_check_text"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout style="@style/product_detail_check_text_container">
+
+    <CheckBox
+        android:id="@+id/warn_view"
+        android:background="@drawable/item_bell_selector_big"
+        android:text=""
+        style="@style/product_detail_check"
+        />
+
+    <TextView
+        android:id="@+id/lblFiyatiDusunceUyar"
+        android:text="FİYATI\nDÜŞÜNCE\nUYAR"
+        style="@style/product_detail_check_text"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout style="@style/product_detail_check_text_container">
+
+    <CheckBox
+        android:id="@+id/review_view"
+        android:background="@drawable/item_baloon_selector"
+        android:text=""
+        style="@style/product_detail_check"
+        />
+
+    <TextView
+        android:text="YORUM YAZ"
+        style="@style/product_detail_check_text"
+        />
+
+  </LinearLayout>
+
+
+  <LinearLayout style="@style/product_detail_check_text_container">
+
+    <CheckBox
+        android:id="@+id/share_view"
+        android:background="@drawable/item_share_selector"
+        android:text=""
+        style="@style/product_detail_check"
+        />
+
+    <TextView
+        android:text="PAYLAŞ"
+        style="@style/product_detail_check_text"
+        />
+
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_toolbar_stores"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:text="@string/menu"
+          android:textColor="#fff"
+          />
+
+      <ImageView
+          android:id="@+id/barcode_icon"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="55dp"
+          android:layout_toLeftOf="@+id/basket_icon"
+          android:src="@drawable/barcode_white"
+          />
+
+
+      <tr.com.idefix.android.view.components.SearchViewComponent
+          android:id="@+id/search_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="20dp"
+          android:layout_toLeftOf="@+id/basket_icon"
+          />
+
+      <tr.com.idefix.android.view.components.BasketViewComponent
+          android:id="@+id/basket_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="25dp"
+          />
+
+    </RelativeLayout>
+  </android.support.v7.widget.Toolbar>
+
+  <fragment
+      android:id="@+id/fragment"
+      android:name="tr.com.idefix.android.view.fragments.LoginFragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/toolbar"
+      tools:layout="@layout/fragment_login"
+      />
+</RelativeLayout>
